@@ -39,5 +39,13 @@ class BestTimeToBuyAndSellStockTest {
         assertEquals(29, output);
     }
 
+    @Test
+    public void testCase5() {
+        int[] input = new int[]{3,8,2,4};
+        int output = bestTimeToBuyAndSellStock.maxProfit(input);
+        assertEquals(5, output);
+    }
+
+
 
 }

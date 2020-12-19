@@ -8,7 +8,7 @@ class ContainerWithMostWaterTest {
     @Test
     public void testCase1() {
         ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
-        int[] input = new int[]{4,3,2,1,4};
+        int[] input = new int[]{2,1,4,3,2,1,4,3,1};
         int output = 16;
         assertEquals(output, containerWithMostWater.maxArea(input));
     }

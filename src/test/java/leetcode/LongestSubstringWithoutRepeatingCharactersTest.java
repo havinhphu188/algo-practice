@@ -16,7 +16,7 @@ class LongestSubstringWithoutRepeatingCharactersTest {
     @Test
     public void testCaseEXP() {
         LongestSubstringWithoutRepeatingCharacters solution = new LongestSubstringWithoutRepeatingCharacters();
-        String input = "itkfiieii";
+        String input = "tmmexkilt";
         int output = 4;
         assertEquals(output, solution.lengthOfLongestSubstring(input));
     }

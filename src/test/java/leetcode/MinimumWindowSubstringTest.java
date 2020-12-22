@@ -62,7 +62,7 @@ class MinimumWindowSubstringTest {
     @Test
     public void testCase7() {
         MinimumWindowSubstring solution = new MinimumWindowSubstring();
-        String s = "";
+        String s = "B";
         String t = "B";
         String output = "B";
         assertEquals(output, solution.minWindow(s,t));

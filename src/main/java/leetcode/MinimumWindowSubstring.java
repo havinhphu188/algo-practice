@@ -23,7 +23,7 @@ public class MinimumWindowSubstring {
         while (r < s.length()) {
             char c = s.charAt(r);
             window.put(c, window.getOrDefault(c,0)+1);
-            if (window.get(c) == dicT.get(c)){
+            if (window.get(c).intValue() == dicT.getOrDefault(c,0).intValue()){
                 formed++;
             }
 
@@ -35,7 +35,7 @@ public class MinimumWindowSubstring {
                 }
 
                 char removedC = s.charAt(l);
-                if (window.get(removedC) == dicT.get(removedC)){
+                if (window.get(removedC).intValue() == dicT.getOrDefault(removedC,0).intValue()){
                     formed--;
                 }
                 window.put(removedC, window.get(removedC)-1);

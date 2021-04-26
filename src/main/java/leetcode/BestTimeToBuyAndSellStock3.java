@@ -17,12 +17,13 @@ public class BestTimeToBuyAndSellStock3 {
         }
 
         int maxProfit = 0;
-
+        int maxProfit1stTrans = 0;
         for (int i = 0; i < prices.length; i++) {
-            for (int j = i; j < prices.length; j++) {
-                if (maxProfitOnEnd[i] + maxProfitOnStart[j] > maxProfit){
-                    maxProfit = maxProfitOnEnd[i] + maxProfitOnStart[j];
-                }
+            if (maxProfitOnEnd[i]>maxProfit1stTrans){
+                maxProfit1stTrans = maxProfitOnEnd[i];
+            }
+            if (maxProfit < maxProfit1stTrans + maxProfitOnStart[i]) {
+                maxProfit = maxProfit1stTrans + maxProfitOnStart[i];
             }
         }
 

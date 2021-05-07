@@ -5,6 +5,14 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+2
+3
+4 5 6
+fwefwef
+3 8 9
+*/
+
 public class ScannerExperiment {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package datastructure.graph;
 
-public class GraphAdjacencyMatrix {
+class GraphAdjacencyMatrix {
     int vertex;
     int[][] matrix;
 

@@ -3,7 +3,7 @@ package datastructure.graph;
 
 import java.util.LinkedList;
 
-public class AdjacencyListGraph {
+class AdjacencyListGraph {
     int vertex;
     LinkedList<Integer>[] list;
 

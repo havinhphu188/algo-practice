@@ -1,35 +1,33 @@
 package datastructure.graph;
-
-
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 class AdjacencyListGraph {
     int vertex;
-    LinkedList<Integer>[] list;
+    ArrayList<ArrayList<Integer>> list;
 
     public AdjacencyListGraph(int vertex) {
         this.vertex = vertex;
-        list = new LinkedList[vertex];
-        for (int i = 0; i <vertex ; i++) {
-            list[i] = new LinkedList<>();
+        list = new ArrayList(vertex);
+        for (int i = 0; i < vertex ; i++) {
+            list.add(new ArrayList<>());
         }
     }
 
     public void addEdge(int source, int destination){
 
         //add edge
-        list[source].addFirst(destination);
+        list.get(source).add(destination);
 
         //add back edge ((for undirected)
-        list[destination].addFirst(source);
+        list.get(destination).add(source);
     }
 
     public void printGraph(){
         for (int i = 0; i <vertex ; i++) {
-            if(list[i].size()>0) {
+            if(list.get(i).size()>0) {
                 System.out.print("Vertex " + i + " is connected to: ");
-                for (int j = 0; j < list[i].size(); j++) {
-                    System.out.print(list[i].get(j) + " ");
+                for (int j = 0; j < list.get(i).size(); j++) {
+                    System.out.print(list.get(i).get(j) + " ");
                 }
                 System.out.println();
             }

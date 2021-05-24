@@ -21,6 +21,7 @@ class PermutationInStringTest {
     public void testCase3() {
         PermutationInString sol = new PermutationInString();
         assertEquals(false, sol.checkInclusion("ab", "eidboaoo"));
+        //e i db oaoo
     }
 
     @Test
@@ -45,5 +46,23 @@ class PermutationInStringTest {
     public void testCase7() {
         PermutationInString sol = new PermutationInString();
         assertEquals(true, sol.checkInclusion("adc", "dcda"));
+    }
+
+    @Test
+    public void testCase8() {
+        PermutationInString sol = new PermutationInString();
+        assertEquals(true, sol.checkInclusion("adc", "zcda"));
+    }
+
+    @Test
+    public void testCase9() {
+        PermutationInString sol = new PermutationInString();
+        assertEquals(true, sol.checkInclusion("xcdd", "deidcxd"));
+    }
+
+    @Test
+    public void testCase10() {
+        PermutationInString sol = new PermutationInString();
+        assertEquals(false, sol.checkInclusion("aaac", "ssaaaxxx"));
     }
 }

@@ -1,45 +1,46 @@
 package leetcode;
 
+import java.util.Stack;
+
+//1hour
 public class DecodeString {
     public String decodeString(String s) {
 //        System.out.println("s = " + s);
-        StringBuilder sb = new StringBuilder();
+        Stack<String> result = new Stack<>();
+        Stack<Integer> count = new Stack<>();
         char[] sArr = s.toCharArray();
-        int i = 0;
-        while (i < sArr.length) {
-            if (sArr[i] >= 'a' && sArr[i] <= 'z') {
-                sb.append(sArr[i]);
+        result.push("");
+        for (int i = 0; i < sArr.length; i++) {
+            int num = 0;
+            while ((sArr[i] >= '0') && (sArr[i] <= '9')) {
+                num = num*10 + sArr[i] - '0';
                 i++;
-            }else{
-                int num = 0;
-                while (sArr[i] >= '0' && sArr[i] <= '9') {
-                    num = num * 10 + sArr[i] - '0';
-                    i++;
-                }
-                i++;
+            }
+            if (num > 0) count.push(num);
 //            System.out.println("num = " + num);
-                StringBuilder child = new StringBuilder();
-                int balance = 1;
-                while ((balance != 0)&& i < sArr.length) {
-                    if (sArr[i] == '[') {
-                        balance++;
-                    }
-                    else if (sArr[i] == ']') {
-                        balance--;
-                    }
-                    child.append(sArr[i]);
-                    i++;
-                }
-                String decodedChild = decodeString(child.toString());
-                for (int j = 0; j < num; j++) {
-                    sb.append(decodedChild);
-                }
+            if (sArr[i] == '['){
+                result.push("");
             }
 
+            if ((sArr[i] >= 'a')&&(sArr[i] <= 'z')){
+                String cur = result.pop();
+                cur = cur.concat(String.valueOf(sArr[i]));
+                result.push(cur);
+            }
+            if (sArr[i] == ']') {
+                String top = result.pop();
+                String cur = result.pop();
+//                System.out.println("count.peek() = " + count.peek());
+                for (int j = 0; j < count.peek(); j++) {
+                    cur = cur.concat(top);
+                }
+                count.pop();
+                result.push(cur);
+            }
+//            System.out.println("result = " + result);
         }
-
-//        System.out.println("sb = " + sb);
-        return sb.toString();
+//        System.out.println("result = " + result.peek());
+        return result.pop();
     }
 
 }

@@ -15,28 +15,26 @@ public class SubarraySumEqualsK {
             left[indexLeft] = sumLeft;
         }
 
+        Map<Integer, Integer> rightMap = new HashMap<>();
+        rightMap.put(0, 1);
         int[] right = new int[nums.length];
         int sumRight = 0;
         for (int i = nums.length - 1; i >= 1; i--) {
             sumRight += nums[i];
             right[i-1] = sumRight;
+            rightMap.put(sumRight, rightMap.getOrDefault(sumRight,0)+1);
         }
         int remainingSum = totalSum - k;
         int result = 0;
 
         for (int i = 0; i < left.length; i++) {
-            for (int j = i; j < right.length; j++) {
-                if (right[j]+left[i]==remainingSum){
-                    result++;
-                }
+            if (rightMap.containsKey(remainingSum - left[i])){
+                result += rightMap.get(remainingSum - left[i]);
             }
+            rightMap.put(right[i], rightMap.get(right[i]) - 1);
+
         }
 
-//        System.out.println("left = " + Arrays.toString(left));
-//        System.out.println("right = " + Arrays.toString(right));
-//        System.out.println("remainingSum = " + remainingSum);
-//        System.out.println("result = " + result);
-//        System.out.println("totalSum = " + totalSum);
         return result;
     }
 }

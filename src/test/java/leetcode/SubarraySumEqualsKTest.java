@@ -74,7 +74,14 @@ class SubarraySumEqualsKTest {
     @Test
     public void testCase12() {
         SubarraySumEqualsK sol = new SubarraySumEqualsK();
-        assertEquals(2, sol.subarraySum(new int[]{-1,-1,0}, 5));
+        assertEquals(1, sol.subarraySum(new int[]{-1,-1,1}, 0));
     }
+
+    @Test
+    public void testCase13() {
+        SubarraySumEqualsK sol = new SubarraySumEqualsK();
+        assertEquals(2, sol.subarraySum(new int[]{2,3,-2,3,1}, 4));
+    }
+
 
 }

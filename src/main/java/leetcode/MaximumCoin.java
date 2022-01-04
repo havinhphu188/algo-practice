@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.Arrays;
 
+//https://leetcode.com/problems/maximum-number-of-coins-you-can-get/
 public class MaximumCoin {
     public int maxCoins(int[] piles) {
         Arrays.sort(piles);

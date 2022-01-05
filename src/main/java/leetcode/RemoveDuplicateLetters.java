@@ -21,6 +21,7 @@ public class RemoveDuplicateLetters {
                 visited[stack.pop() - 'a'] = false;
             }
             stack.push(c);
+           // System.out.println("stack = " + stack);
             visited[c - 'a'] = true;
         }
         StringBuilder sb = new StringBuilder();

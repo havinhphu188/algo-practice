@@ -41,4 +41,10 @@ class RemoveDuplicateLettersTest {
         assertEquals("nlmop", sol.removeDuplicateLetters("nnnlllmmmoop"));
     }
 
+    @Test
+    public void testCase7() {
+        RemoveDuplicateLetters sol = new RemoveDuplicateLetters();
+        assertEquals("acdb", sol.removeDuplicateLetters("cbacdcbc"));
+    }
+
 }

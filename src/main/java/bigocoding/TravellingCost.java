@@ -6,6 +6,8 @@ import com.google.gson.GsonBuilder;
 import java.util.*;
 
 //https://www.spoj.com/problems/TRVCOST/
+
+//dijkstra
 public class TravellingCost {
     static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     public static void main(String[] args) {

@@ -9,6 +9,7 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 //https://www.spoj.com/problems/CSTREET/
+//Prim Minimun Spaning Tree
 public class CobbledStreets {
     public static void main(String[] args) {
         MyScanner in = new MyScanner();

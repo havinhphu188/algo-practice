@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 //https://www.spoj.com/problems/CAM5/
+//DFS
+
 public class PrayatnaPr {
 
     public static void main(String[] args) {

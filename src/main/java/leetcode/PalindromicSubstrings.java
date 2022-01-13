@@ -1,31 +1,22 @@
 package leetcode;
+//https://leetcode.com/problems/palindromic-substrings/
+//647. Palindromic Substrings
+//DP Solution: https://leetcode.com/problems/palindromic-substrings/discuss/258917/Java-Simple-Code%3A-DP-short
 
 public class PalindromicSubstrings {
     public int countSubstrings(String s) {
-        int l = 0;
-        int r;
-        int count = s.length();
-        while (l < s.length() - 1) {
-            r = l + 1;
-            count = getCount(s, l, r, count);
-            if (l + 2 < s.length()){
-                r = l + 2;
-                count = getCount(s, l, r, count);
+        int count = 0, n = s.length();
+        boolean[][] dp = new boolean[n][n];
+        for (int d = 0; d < n; d++) {
+            for (int i = 0; i+d < n; i++) {
+                int j = i + d;
+                if (s.charAt(i) == s.charAt(j)) {
+                    dp[i][j] = (i+1 >= j-1) ? true : dp[i+1][j-1];
+                    if (dp[i][j]) count++;
+                }
             }
-            l++;
-        }
-
-        return count;
-    }
-
-    private int getCount(String s, int l, int r, int count) {
-        int i = l;
-        int j = r;
-        while ((i >= 0)&&(j< s.length())&&(s.charAt(i)==s.charAt(j))){
-            count++;
-            i--;
-            j++;
         }
         return count;
     }
+
 }

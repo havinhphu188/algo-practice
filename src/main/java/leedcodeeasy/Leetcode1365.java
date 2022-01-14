@@ -1,6 +1,8 @@
 package leedcodeeasy;
 
 import java.util.Arrays;
+//https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+//1365. How Many Numbers Are Smaller Than the Current Number
 
 public class Leetcode1365 {
     public int[] smallerNumbersThanCurrent(int[] nums) {

@@ -2,6 +2,8 @@ package leedcodeeasy;
 
 import java.util.Set;
 import java.util.stream.Collectors;
+//https://leetcode.com/problems/jewels-and-stones/
+//771. Jewels and Stones
 
 public class JewelsAndStone {
     public int numJewelsInStones(String jewels, String stones) {

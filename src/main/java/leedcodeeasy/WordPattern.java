@@ -3,7 +3,8 @@ package leedcodeeasy;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
+//https://leetcode.com/problems/word-pattern/
+//290. Word Pattern
 public class WordPattern {
     public boolean wordPattern(String pattern, String s) {
 //        System.out.println("pattern = " + pattern);

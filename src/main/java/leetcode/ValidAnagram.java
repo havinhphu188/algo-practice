@@ -1,6 +1,9 @@
 package leetcode;
 import java.util.Arrays;
 
+//242. Valid Anagram
+//https://leetcode.com/problems/valid-anagram/
+
 public class ValidAnagram {
 
     //O(n) = max(length(s), length(t))

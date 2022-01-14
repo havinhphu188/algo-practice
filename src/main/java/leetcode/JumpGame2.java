@@ -1,6 +1,8 @@
 package leetcode;
 
 import java.util.Arrays;
+
+//Jump Game II
 //https://leetcode.com/problems/jump-game-ii
 // Good solution: https://leetcode.com/problems/jump-game-ii/discuss/18014/Concise-O(n)-one-loop-JAVA-solution-based-on-Greedy
 public class JumpGame2 {

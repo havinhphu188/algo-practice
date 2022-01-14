@@ -3,7 +3,8 @@ package leetcode;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-
+//https://leetcode.com/problems/merge-intervals/
+//56. Merge Intervals
 public class MergeIntervals {
 
     public int[][] merge(int[][] intervals) {

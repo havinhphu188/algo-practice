@@ -1,5 +1,6 @@
 package leetcode;
 //Solution
+//424. Longest Repeating Character Replacement
 //https://leetcode.com/problems/longest-repeating-character-replacement/discuss/91271/Java-12-lines-O(n)-sliding-window-solution-with-explanation/95833
 public class LongestRepeatingCharacterReplacement {
     public int characterReplacement(String s, int k) {

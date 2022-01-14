@@ -3,7 +3,8 @@ package leetcode;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
+//560. Subarray Sum Equals K
+//https://leetcode.com/problems/subarray-sum-equals-k/
 public class SubarraySumEqualsK {
         public int subarraySum(int[] nums, int k) {
     //        System.out.println("nums = " + Arrays.toString(nums));

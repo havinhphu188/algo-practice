@@ -3,6 +3,8 @@ package leetcode;
 import java.util.Stack;
 
 //1hour
+//394. Decode String
+//https://leetcode.com/problems/decode-string/
 public class DecodeString {
     public String decodeString(String s) {
 //        System.out.println("s = " + s);

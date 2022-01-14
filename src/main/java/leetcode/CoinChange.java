@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.Arrays;
 //https://leetcode.com/problems/coin-change/
+//322. Coin Change
 public class CoinChange {
     public int coinChange(int[] coins, int amount) {
         Arrays.sort(coins);

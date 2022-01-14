@@ -3,7 +3,8 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
+//https://leetcode.com/problems/valid-parentheses/
+//20. Valid Parentheses
 public class ValidParentheses {
     //O(n)
     public boolean isValid(String s) {

@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.Arrays;
 
+//55. Jump Game
 //https://leetcode.com/problems/jump-game/
 public class JumpGame {
     public boolean canJump(int[] nums) {

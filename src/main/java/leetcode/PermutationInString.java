@@ -3,6 +3,9 @@ package leetcode;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
+//https://leetcode.com/problems/permutation-in-string/
+//567. Permutation in String
+// Slide window Solution: https://leetcode.com/problems/permutation-in-string/solution/
 
 public class PermutationInString {
 //    Gson gson = new Gson();

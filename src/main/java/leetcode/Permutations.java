@@ -3,6 +3,8 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+//https://leetcode.com/problems/permutations/
+//46. Permutations
 
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {

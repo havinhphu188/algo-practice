@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-
+//https://leetcode.com/problems/permutations-ii/
+//47. Permutations II
 public class Permutation2 {
     public List<List<Integer>> permuteUnique(int[] nums) {
         HashMap<Integer, Integer> counter = new HashMap<>();

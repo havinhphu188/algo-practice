@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//22. Generate Parentheses
+//https://leetcode.com/problems/generate-parentheses/
 public class GenerateParenthesis {
     public List<String> generateParenthesis(int n) {
         System.out.println("n = " + n);

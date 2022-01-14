@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.Arrays;
 //https://leetcode.com/problems/k-diff-pairs-in-an-array/
+//532. K-diff Pairs in an Array
 public class KDiffPair {
     public int findPairs(int[] nums, int k) {
         Arrays.sort(nums);

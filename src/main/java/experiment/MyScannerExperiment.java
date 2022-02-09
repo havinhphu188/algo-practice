@@ -35,6 +35,10 @@ public class MyScannerExperiment {
             out.println("e = " + e);
             out.println("line = " + line);
             out.println("arr = " + Arrays.toString(arr));
+            out.print("data"); // this line will not be print (flush) without out.println();
+            out.println();
+            out.print("data2");
+            out.println();
         }
     }
 

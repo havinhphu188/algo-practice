@@ -5,44 +5,34 @@ import java.util.Stack;
 //1hour
 //394. Decode String
 //https://leetcode.com/problems/decode-string/
+//Recommended Solution: https://leetcode.com/problems/decode-string/solutions/3385397/100-faster-java-solution-using-two-stack-efficient-solution/
 public class DecodeString {
     public String decodeString(String s) {
-//        System.out.println("s = " + s);
-        Stack<String> result = new Stack<>();
-        Stack<Integer> count = new Stack<>();
-        char[] sArr = s.toCharArray();
-        result.push("");
-        for (int i = 0; i < sArr.length; i++) {
-            int num = 0;
-            while ((sArr[i] >= '0') && (sArr[i] <= '9')) {
-                num = num*10 + sArr[i] - '0';
-                i++;
-            }
-            if (num > 0) count.push(num);
-//            System.out.println("num = " + num);
-            if (sArr[i] == '['){
-                result.push("");
-            }
-
-            if ((sArr[i] >= 'a')&&(sArr[i] <= 'z')){
-                String cur = result.pop();
-                cur = cur.concat(String.valueOf(sArr[i]));
-                result.push(cur);
-            }
-            if (sArr[i] == ']') {
-                String top = result.pop();
-                String cur = result.pop();
-//                System.out.println("count.peek() = " + count.peek());
-                for (int j = 0; j < count.peek(); j++) {
-                    cur = cur.concat(top);
+        Stack<StringBuilder> ss = new Stack<StringBuilder>();
+        Stack<Integer> si = new Stack<Integer>();
+        int num = 0;
+        StringBuilder str = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if ((c >= '0') && (c <= '9')) {
+                num = num * 10 + c - '0';
+            } else if (c == '[') {
+                si.push(num);
+                num = 0;
+                ss.push(str);
+                str = new StringBuilder();
+            } else if (c == ']') {
+                StringBuilder temp = str;
+                str = ss.pop();
+                int count = si.pop();
+                while (count > 0) {
+                    str.append(temp);
+                    count--;
                 }
-                count.pop();
-                result.push(cur);
+            } else {
+                str.append(c);
             }
-//            System.out.println("result = " + result);
         }
-//        System.out.println("result = " + result.peek());
-        return result.pop();
+        return str.toString();
     }
 
 }

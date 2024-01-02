@@ -3,17 +3,15 @@ package dynamicprogramming;
 //https://www.geeksforgeeks.org/problems/rod-cutting0840/1
 class RodCutting{
     public int cutRod(int price[], int n) {
-        int[][] dp = new int[price.length + 1][n + 1];
+        int[] dp = new int[n + 1];
         for (int i = 1; i < price.length + 1; i++){
             for (int j = 1; j < n + 1; j++){
                 if (j >= i ){
-                    dp[i][j] = Math.max(dp[i][j - (i)] + price[i - 1], dp[i - 1][j]);
-                }else {
-                    dp[i][j] = dp[i - 1][j];
+                    dp[j] = Math.max(dp[j - (i)] + price[i - 1], dp[j]);
                 }
             }
         }
-        return dp[price.length][n];
+        return dp[n];
     }
 
     public static void main(String[] args) {
